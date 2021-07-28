@@ -1,0 +1,25 @@
+<a href="/newForm"><button type="button" class="btn btn-success">Adicionar</button></a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id_user</th>
+            <th scope="col">email</th>
+            <th scope="col">pass</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each user}}
+        <tr>
+            <th scope="row">{{id_user}}</th>
+            <td>{{email}}</td>
+            <td>{{pass}}</td>
+            <td>
+                <a href="/editForm/{{id_user}}"><button type="submit" class="btn btn-warning">Editar</button></a>
+                <a href="/delReq/{{id_user}}"><button type="submit" class="btn btn-danger">Apagar</button></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
