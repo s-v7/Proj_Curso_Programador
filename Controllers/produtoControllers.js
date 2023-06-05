@@ -4,10 +4,10 @@ const qs = require("querystring");
 
 // var produtoControllers = require("./../models/produto")
 
-var S = {}
+var produtoS = {}
 
 //Inserir no banco - método-POST
-S.inserir = function(req,res){
+produtoS.inserir = function(req,res){
     produtoControllers.create({
         descricao: req.body.descricao,
         preco: req.body.preco,
@@ -25,7 +25,7 @@ S.inserir = function(req,res){
 }
 
 //Método GET para buscar Um
-S.buscarUm = function(req,res){
+produtoS.buscarUm = function(req,res){
     produtoControllers.findOne({
         raw:true,
         where: {
@@ -44,7 +44,7 @@ S.buscarUm = function(req,res){
 }
 
 //Método GET para buscar vários. 
-S.buscarVarios = function(req,res){
+produtoS.buscarVarios = function(req,res){
     produtoControllers.findAll({
         raw:true
     }).then({
@@ -59,7 +59,7 @@ S.buscarVarios = function(req,res){
 }
 
 //Método-PUT
-S.atualizar = function(req,res){
+produtoS.atualizar = function(req,res){
     produtoControllers.update({
         descricao: req.params.descricao,
         where: {id_produto: req.params.id_produto} 
@@ -75,7 +75,7 @@ S.atualizar = function(req,res){
 }
 
 //Método-Delete
-S.remover = function(req,res){
+produtoS.remover = function(req,res){
     produtoControllers.destroy({
         where: { id_produto: req.params.id_produto}
     }).then({
@@ -89,4 +89,4 @@ S.remover = function(req,res){
     })
 }
 
-module.exports = S 
+module.exports = produtoS 
