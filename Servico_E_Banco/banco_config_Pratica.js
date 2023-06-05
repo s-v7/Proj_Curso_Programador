@@ -1,4 +1,4 @@
-var sequelize = require("sequelize")
+var sequelize = require("sequelize");
 
 var conexao  = new sequelize("API", "root", "777",{
     host:"localhost",
@@ -14,4 +14,4 @@ conexao.authenticate().then(
         console.log("Erro ao se conectar.ERRO: "+erro)
 }
 )
-module.exports = conexao 
+module.exports = conexao;
