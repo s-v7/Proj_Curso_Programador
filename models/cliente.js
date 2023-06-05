@@ -1,5 +1,5 @@
-var sequelize = require("sequelize")
-var banco  = require("../Servico_E_Banco/banco_config")
+var sequelize = require("sequelize");
+var banco  = require("../Servico_E_Banco/banco_config");
 
 var cliente = banco.define("cliente", {
     idcliente: {
