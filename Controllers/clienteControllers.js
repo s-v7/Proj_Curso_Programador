@@ -1,4 +1,4 @@
-var cliente = require("./../models/cliente")
+var cliente = require("./../models/cliente");
 
 cliente.create({
     nome: "xzxxz",
