@@ -6,11 +6,11 @@ var rotas_Produtos = express.Router()
 
 //Rotas API
 
-rotas_Produtos.get("/produtos", S.bucarVarios)
-rotas_Produtos.get("/produtos/:id", S.buscarUm)
-rotas_Produtos.post("/produtos", S.inserir)
-rotas_Produtos.put("/produtos/:id", S.atualizar)
-rotas_Produtos.delete("/produtosq:id", S.remover)
+rotas_Produtos.get("/produtos", produtoS.bucarVarios)
+rotas_Produtos.get("/produtos/:id", produtoS.buscarUm)
+rotas_Produtos.post("/produtos", produtoS.inserir)
+rotas_Produtos.put("/produtos/:id", produtoS.atualizar)
+rotas_Produtos.delete("/produtosq:id", produtoS.remover)
 
 
-module.exports = rotas_Produtos
+module.exports = rotas_Produtos;
