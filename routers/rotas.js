@@ -1,7 +1,7 @@
-var express = require("express")
-const produto = require("../models/produto")
+var express = require("express");
+const produto = require("../models/produto");
 
-var produtoControllers = require("./../Controllers/produtoControllers")
+var produtoControllers = require("./../Controllers/produtoControllers");
 var rotas_Produtos = express.Router()
 
 //Rotas API
