@@ -1,4 +1,4 @@
-const produto = require("./../models/produto")
+const produto = require("./../models/produto");
 const axios = require("axios");
 const qs = require("querystring");
 
@@ -14,11 +14,11 @@ produtoS.inserir = function(req,res){
         id_produto: req.body.id_produto,
     }).then({
         function(dados){
-            res.status(200).send()
+            res.status(200).send();
         }
     }).catch({
         function(erros){
-            res.status(500).send("Erro na transmissão de sinal: "+erro)
+            res.status(500).send("Erro na transmissão de sinal: "+erro);
         }
     })
 
@@ -33,11 +33,11 @@ produtoS.buscarUm = function(req,res){
         }
     }).then({
         function(dados){
-            res.status(200).send()
+            res.status(200).send();
         }
     }).catch({
         function(erros){
-            res.status(500).send("Erro ao buscar um elemento:  "+erro)
+            res.status(500).send("Erro ao buscar um elemento:  "+erro);
         }
     })
 
@@ -49,11 +49,11 @@ produtoS.buscarVarios = function(req,res){
         raw:true
     }).then({
         function(dados){
-            res.status(200).send(dados)
+            res.status(200).send(dados);
         }
     }).catch({
         function(erros){
-            res.status(500).send('Erro ao buscar o conjunto de elementos:${erros}')
+            res.status(500).send('Erro ao buscar o conjunto de elementos:${erros}');
         }
     })
 }
@@ -65,11 +65,11 @@ produtoS.atualizar = function(req,res){
         where: {id_produto: req.params.id_produto} 
     }).then({
         function(dados){
-            res.status(200).send(dados)
+            res.status(200).send(dados);
         }
     }).catch({
         function(erros){
-            res.status(500).send('Erro ao tentar atualizar o elemento:${erros}')
+            res.status(500).send('Erro ao tentar atualizar o elemento:${erros}');
         }
     })
 }
@@ -80,13 +80,13 @@ produtoS.remover = function(req,res){
         where: { id_produto: req.params.id_produto}
     }).then({
         function(dados){
-            res.sendStatus(200)
+            res.sendStatus(200);
         }
     }).catch({
         function(erros){
-            res.status(500).send('Erro ao tentar remover o elemento do Conjunto:${erros}')
+            res.status(500).send('Erro ao tentar remover o elemento do Conjunto:${erros}');
         }
     })
 }
 
-module.exports = produtoS 
+module.exports = produtoS;
